@@ -1,7 +1,12 @@
 package com.springframework.sfdi.services;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class GreetingServiceImpl implements GreetingService{
-  @Override public String sayGreeting() {
+
+  @Override
+  public String sayGreeting() {
     System.out.println("Hello World");
     return "Hi folks";
   }
