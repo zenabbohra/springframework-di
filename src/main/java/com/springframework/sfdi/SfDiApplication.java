@@ -17,7 +17,7 @@ public class SfDiApplication {
 
 		System.out.println("-----MyController");
 		MyController myController = (MyController) ctx.getBean("myController");
-		System.out.println(myController.sayHello());
+		System.out.println(myController.getGreeting());
 
 		System.out.println("-----PropertyInjectedController");
 		PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
