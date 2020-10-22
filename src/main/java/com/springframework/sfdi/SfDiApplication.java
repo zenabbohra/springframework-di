@@ -1,6 +1,7 @@
 package com.springframework.sfdi;
 
 import com.springframework.sfdi.controllers.ConstructorInjectedController;
+import com.springframework.sfdi.controllers.I18nController;
 import com.springframework.sfdi.controllers.MyController;
 import com.springframework.sfdi.controllers.PropertyInjectedController;
 import com.springframework.sfdi.controllers.SetterInjectedController;
@@ -30,6 +31,9 @@ public class SfDiApplication {
 		System.out.println("-----ConstructorInjectedController");
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
-	}
 
+		System.out.println("-----Active Profile Controller");
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.getGreeting());
+	}
 }
